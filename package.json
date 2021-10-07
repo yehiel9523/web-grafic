@@ -1,0 +1,19 @@
+{
+  "name": "web-grafic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yehiel9523/web-grafic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yehiel9523/web-grafic/issues"
+  },
+  "homepage": "https://github.com/yehiel9523/web-grafic#readme"
+}
