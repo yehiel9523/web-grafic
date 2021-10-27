@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+body {
+    background: linear-gradient(60deg, rgb(213, 230, 206), rgb(242, 203, 195));
+    color: white;
+    text-shadow: -1px 0 2px black, 1px 0 2px black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    /* border-top: 2px solid rgb(242, 203, 195); */
+    background: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+    margin: 0;
+    color: rgb(241, 169, 155);
+    text-shadow: 1px 1px 1px black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+img {
+    border-radius: 2px;
+    height: 60px;
 }
 
-.App-link {
-  color: #61dafb;
+.aboutHeader {
+    text-align: center;
+    margin-top: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.aboutContent {
+    margin-inline: 15%;
+    border-radius: 5px;
+    padding: 10px;
+    background: white;
+    color: rgb(243, 159, 142);
+    text-shadow: none;
+}
+
+.conteiner {
+    margin: 40px;
+    margin-top: 10px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    justify-content: space-around;
+    gap: 20px;
+    border-radius: 10px;
+    border: 1px solid lightcoral;
+}
+
+.projuct {
+    border: 1px solid lightcoral;
+    height: 300px;
+    width: 200px;
+    border-radius: 8px;
 }
