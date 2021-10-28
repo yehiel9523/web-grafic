@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Upload from "./Upload";
 
 export default function Login() {
     const [userInfo, setUserInfo] = useState({});
@@ -41,8 +42,7 @@ export default function Login() {
             <h2>{res}</h2>
             {res === 'Welcome Riki' ?
                 <div>
-                    <h2>test</h2>
-                    <Link to={'/upload'}>Go to Upload</Link>
+                    <Upload />
                 </div>
                 : null}
         </>

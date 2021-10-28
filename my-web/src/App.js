@@ -32,7 +32,7 @@ function App() {
           <h3 dir='rtl' className='aboutHeader' >הפרויקטים שלי</h3>
           <div className="conteiner">
             <div className="projuct">
-              <img src="https://www.linkpicture.com/q/מודעה-חדוי.png" alt="project" srcset="" />
+              <img src="https://webgraphic.s3.eu-central-1.amazonaws.com/carbon.png" alt="project" srcset="" />
             </div>
             <div className="projuct"></div>
             <div className="projuct"></div>
@@ -57,9 +57,6 @@ function App() {
       </Route>
       <Route path='/login'>
         <Login />
-      </Route>
-      <Route path='/upload'>
-        <Upload />
       </Route>
     </Router>
   )
