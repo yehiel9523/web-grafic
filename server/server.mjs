@@ -2,9 +2,10 @@ import express, { json } from "express";
 import path from 'path';
 import { fileURLToPath } from 'url';
 import aws from 'aws-sdk';
-// bodyParser = require('body-parser'),
 import multer from 'multer';
 import multerS3 from 'multer-s3';
+import dontenv from 'dotenv'
+dontenv.config();
 
 
 const __filename = fileURLToPath(
@@ -16,9 +17,9 @@ app.use(express.json());
 app.use(express.static("../my-web/build"));
 
 aws.config.update({
-    secretAccessKey: 'DiXpaZHQYEfXSU17RPOu0q3wc5Ip9lSm5OTjtIW0',
-    accessKeyId: 'AKIA2XB463DFBEOCWDQZ',
-    region: 'eu-central-1'
+    secretAccessKey: process.env.SECRET_ACCESS_KEY,
+    accessKeyId: process.env.ACCESS_ID,
+    region: process.env.REGION
 });
 
 const s3 = new aws.S3();
