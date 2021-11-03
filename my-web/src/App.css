@@ -15,6 +15,7 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    z-index: 10;
 }
 
 h2 {
@@ -43,21 +44,47 @@ img {
 }
 
 .conteiner {
-    margin: 40px;
+    margin: 100px;
     margin-top: 10px;
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
-    background: white;
+    background: rgb(90, 40, 11);
     justify-content: space-around;
     gap: 20px;
-    border-radius: 10px;
-    border: 1px solid lightcoral;
+    border-radius: 15px;
+    /* border: 1px solid lightcoral; */
 }
 
 .projuct {
-    border: 1px solid lightcoral;
+    /* border: 1px solid lightcoral; */
+    position: relative;
     height: 300px;
-    width: 200px;
-    border-radius: 8px;
+    width: 400px;
+    border-radius: 15px;
 }
+
+.imageProject {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    border-radius: 15px;
+    transition: all 1s linear;
+    cursor: pointer;
+}
+
+.imageProject:hover {
+    object-fit: contain;
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    z-index: 9;
+}
+
+
+/* .fullImage{
+    position: absolute;
+
+
+} */
