@@ -1,47 +1,44 @@
-import { useEffect, useState } from 'react';
-import logo2 from './images/logo2.png';
-import Upload from './Upload';
+import { useContext } from 'react';
+import logo2 from './images/לוגו_thumbnail2.png';
+import { ImagesContecxt } from './ImagesContects';
 
 
 
 export default function Main() {
-    // const [imageClass, setImageClass] = useState('imageProjuct')
-    const [images, setImages] = useState([])
-    // const fullPicture = () => {
-    //     setImageClass('fullImage')
+    const { images } = useContext(ImagesContecxt)
 
-
-    // }
-    // useEffect(() => {
-    // }, [imageClass])
-    useEffect(() => {
-        fetch('./getImages')
-            .then(res => res.json())
-            .then((data) => {
-                setImages(data);
-                console.log(data)
-            })
-    }, [])
     return (
         <>
 
+
             <header className='header'>
-                <img src={logo2} alt="logo" />
+                <img className='header-logo' src={logo2} alt="logo" />
+                <div dir='rtl' className='header-href'>
+                    <a href="#about">קצת עליי</a>
+                    <a href="#projucts">לפרויקטים שלי</a>
+                </div>
+
             </header>
+            <div className='logo-background'></div>
 
             <div>
-                <h3 dir='rtl' className='aboutHeader'>קצת עליי</h3>
-                <p className="aboutContent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam expedita facilis voluptatem animi perspiciatis consequatur doloribus vitae porro, cum repellat distinctio aut ut architecto nostrum veritatis aliquam atque quis alias.</p>
+                <h3 id="about" dir='rtl' className='aboutHeader'>קצת עליי</h3>
+                <p className="aboutContent">קצת עליי קצת עליי קצת עליי קצת עליי קצת עליי קצת עליי קצת עליי קצת עליי קצת עליי קצת עליי קצת עליי קצת עליי קצת עליי קצת עליי קצת עליי קצת עליי קצת עליי קצת עליי קצת עליי קצת עליי קצת עליי קצת עליי קצת עליי קצת עליי קצת עליי  </p>
             </div>
 
 
-            <h3 dir='rtl' className='aboutHeader' >הפרויקטים שלי</h3>
+            <h3 id='projucts' dir='rtl' className='projuctsHeader' >הפרויקטים שלי</h3>
             <div className="conteiner">
-                {images.map((image) => {
-                    return <div className="projuct">
-                        <img className='imageProject' src={`${image.location}`} alt="image project" />
-                    </div>
-                })}
+                {images.length > 0 ?
+                    images.map((image) => {
+                        return <div key={image.id} className="projuct">
+                            <img key={image.id} className='imageProject' src={`${image.location}`} alt="image-project" />
+                        </div>
+                    }) :
+                    <div>...טוען</div>
+
+
+                }
             </div>
         </>
     )

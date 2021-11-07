@@ -2,23 +2,25 @@ export default function Preview(
     { isSelected, selectedFile, imagePreview }
 ) {
     return (
-        <>
+        <div className='flex-coulmn'>
             {isSelected ? (
-                <div>
-                    <p>Filename: {selectedFile.name}</p>
+                <div className='flex-coulmn'>
+                    {/* <p>Filename: {selectedFile.name}</p>
                     <p>Filetype: {selectedFile.type}</p>
-                    <p>Size in bytes: {selectedFile.size}</p>
+                    <p>Size in bytes: {selectedFile.size}</p> */}
                     {/* <p>
                         lastModifiedDate:{' '}
                         {selectedFile.lastModifiedDate.toLocaleDateString()}
                     </p> */}
-                </div>
-            ) : (
-                <p>Select a file to show details</p>
-            )}
-            <img src={`${imagePreview}`} alt="image" />
+                    <img src={`${imagePreview}`} alt="image" />
 
-        </>
+                </div>
+
+            ) : (
+                <p>בחר קובץ </p>
+            )}
+
+        </div>
     )
 
 }

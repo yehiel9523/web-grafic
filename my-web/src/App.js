@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import './App.css';
 import Main from './Main';
 import Login from './Login';
@@ -6,19 +5,19 @@ import Login from './Login';
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
-  Link
 } from "react-router-dom";
+import ImagesProvider from './ImagesContects';
 
 
 function App() {
   return (
     <Router>
-      <Route exact path="/">
-        <Main />
-
-      </Route>
+      <ImagesProvider>
+        <Route exact path="/">
+          <Main />
+        </Route>
+      </ImagesProvider>
       <Route path='/login'>
         <Login />
       </Route>

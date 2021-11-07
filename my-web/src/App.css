@@ -5,17 +5,33 @@ body {
 }
 
 header {
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgba(223, 12, 12, 0);
     /* border-top: 2px solid rgb(242, 203, 195); */
-    background: rgb(255, 255, 255);
+    background: #7e0b0bd8;
     position: fixed;
     top: 0;
     width: 100%;
     display: flex;
     justify-content: space-around;
+    gap: 100px;
+    align-items: center;
     z-index: 10;
+}
+
+.header-href {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 120%;
 }
 
 h2 {
@@ -24,23 +40,43 @@ h2 {
     text-shadow: 1px 1px 1px black;
 }
 
-img {
+img.header-logo {
     border-radius: 2px;
-    height: 60px;
+    height: 80px;
+    justify-content: flex-end;
+}
+
+.logo-background {
+    background: url('./images/לוגו_thumbnail2.png');
+    height: 170px;
+    margin-top: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .aboutHeader {
     text-align: center;
-    margin-top: 100px;
+    padding-top: 150px;
+    margin-bottom: 50px;
+    font-size: 150%;
 }
 
 .aboutContent {
     margin-inline: 15%;
     border-radius: 5px;
     padding: 10px;
-    background: white;
-    color: rgb(243, 159, 142);
+    /* background: white; */
+    color: #7e0b0b;
     text-shadow: none;
+    font-size: 130%;
+}
+
+.projuctsHeader {
+    text-align: center;
+    padding-top: 150px;
+    margin-bottom: 50px;
+    font-size: 150%;
 }
 
 .conteiner {
@@ -49,8 +85,8 @@ img {
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
-    background: rgb(90, 40, 11);
-    justify-content: space-around;
+    background: #7e0b0b;
+    justify-content: space-evenly;
     gap: 20px;
     border-radius: 15px;
     /* border: 1px solid lightcoral; */
@@ -70,7 +106,10 @@ img {
     height: 100%;
     object-position: center;
     border-radius: 15px;
-    transition: all 1s linear;
+    /* transition-property: width;
+    transition-duration: 4s;
+    transition-delay: 2s; */
+    transition: all 1s ease-in;
     cursor: pointer;
 }
 
@@ -80,6 +119,14 @@ img {
     height: 110%;
     position: absolute;
     z-index: 9;
+}
+
+.flex-coulmn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
 }
 
 

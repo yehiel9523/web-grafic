@@ -81,9 +81,9 @@ app.post('/loginServer', async(req, res) => {
 
     console.log(req.body.user)
     if (req.body.user === 'Riki' && req.body.pass === '1234')
-        res.send(JSON.stringify({ res: 'Welcome Riki' }))
+        res.send(JSON.stringify({ res: '!ברוכה הבאה' }))
     else {
-        res.send(JSON.stringify({ res: 'Not allowed' }))
+        res.send(JSON.stringify({ res: 'לא מורשה' }))
     }
 })
 app.get('/getImages', async(req, res) => {

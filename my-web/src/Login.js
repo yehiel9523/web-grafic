@@ -1,5 +1,4 @@
 import { useRef, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import Upload from "./Upload";
 
 export default function Login() {
@@ -34,18 +33,18 @@ export default function Login() {
     // useEffect(() => console.log(userRef), [userRef])
 
     return (
-        <>
-            <h1>Please Log in</h1>
+        <div className='flex-coulmn' >
+            <h1>בבקשה הכנס שם משתמש וסיסמא </h1>
             <input ref={userRef} type="text" />
             <input ref={passRef} type="password" />
-            <input onClick={sendLogin} type="button" value="send" />
+            <input onClick={sendLogin} type="button" value="הכנס" />
             <h2>{res}</h2>
-            {res === 'Welcome Riki' ?
+            {res === '!ברוכה הבאה' ?
                 <div>
                     <Upload />
                 </div>
                 : null}
-        </>
+        </div>
 
     )
 }

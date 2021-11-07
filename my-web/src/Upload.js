@@ -40,16 +40,16 @@ export default function Upload() {
             });
     };
     return (
-        <>
+        <div className='flex-coulmn'>
             <input type="file" name="file" onChange={changeHandler} />
             <Preview isSelected={isSelected} selectedFile={selectedFile} imagePreview={imagePreview} />
 
             <div>
-                <button onClick={handleSubmission}>Submit</button>
+                <button onClick={handleSubmission}>שלח</button>
             </div>
 
 
-        </>
+        </div>
     )
 
 }
