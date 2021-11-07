@@ -80,7 +80,8 @@ const uploadPic = async(req, res, next) => {
 app.post('/loginServer', async(req, res) => {
 
     console.log(req.body.user)
-    if (req.body.user === 'Riki' && req.body.pass === '1234')
+    console.log(process.env.USER, process.env.PASSWORD)
+    if (req.body.user === process.env.USER && req.body.pass === process.env.PASSWORD)
         res.send(JSON.stringify({ res: '!ברוכה הבאה' }))
     else {
         res.send(JSON.stringify({ res: 'לא מורשה' }))
