@@ -1,7 +1,6 @@
 import mongoose from 'mongoose';
 
-const DB_URI =
-    'mongodb+srv://yehiel9523:d.dag.d.p@cluster0.xjoo6.mongodb.net/webGraphic';
+const DB_URI = process.env.DB_URI;
 export const connect = () => {
     mongoose.connect(DB_URI).then(() => console.log('mongoDB is connected'))
         .catch((err) => console.log(err));
